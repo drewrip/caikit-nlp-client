@@ -349,7 +349,7 @@ class HttpClient:
         response = requests.post(
             f"{self._api_base}/api/v1/task/embedding",
             json=json_input,
-            timeout=timeout,
+            timeout=1200,
             **req_kwargs,  # type: ignore
         )
         log.debug(f"Response: {response}")
@@ -378,7 +378,7 @@ class HttpClient:
         response = requests.post(
             f"{self._api_base}/api/v1/task/embedding-tasks",
             json=json_input,
-            timeout=timeout,
+            timeout=1200,
             **req_kwargs,  # type: ignore
         )
         log.debug(f"Response: {response}")
@@ -411,7 +411,7 @@ class HttpClient:
         response = requests.post(
             f"{self._api_base}/api/v1/task/sentence-similarity",
             json=json_input,
-            timeout=timeout,
+            timeout=1200,
             **req_kwargs,  # type: ignore
         )
         log.debug(f"Response: {response}")
@@ -444,7 +444,7 @@ class HttpClient:
         response = requests.post(
             f"{self._api_base}/api/v1/task/sentence-similarity-tasks",
             json=json_input,
-            timeout=timeout,
+            timeout=1200,
             **req_kwargs,  # type: ignore
         )
         log.debug(f"Response: {response}")
@@ -477,7 +477,7 @@ class HttpClient:
         response = requests.post(
             f"{self._api_base}/api/v1/task/rerank",
             json=json_input,
-            timeout=timeout,
+            timeout=1200,
             **req_kwargs,  # type: ignore
         )
         log.debug(f"Response: {response}")
@@ -510,7 +510,7 @@ class HttpClient:
         response = requests.post(
             f"{self._api_base}/api/v1/task/rerank-tasks",
             json=json_input,
-            timeout=timeout,
+            timeout=1200.0,
             **req_kwargs,  # type: ignore
         )
         log.debug(f"Response: {response}")
